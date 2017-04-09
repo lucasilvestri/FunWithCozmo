@@ -52,7 +52,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
         time.sleep(1)
         if id_cube:
             robot.play_anim_trigger(cozmo.anim.Triggers.CubePounceLoseSession).wait_for_completed()
-            print("vado verso il cubo", id_cube)
+            print("Going to cube ", id_cube)
             for mycube in cube_vision:
                 if mycube.object_id == id_cube:
                     robot.go_to_object(mycube, distance_mm(60)).wait_for_completed()
