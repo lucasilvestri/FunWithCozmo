@@ -1,3 +1,8 @@
+'''
+This is a mini game for Cozmo. Start Cozmo with a view of the 3 cubes. When it says 'My favourite color is green' you
+can tap a cube and see it goes to revert it to green. Like an useless machine.
+'''
+
 import cozmo
 from cozmo.util import degrees, distance_mm, speed_mmps
 
@@ -12,7 +17,6 @@ def tap_handler(evt, obj=None, tap_count=None, **kwargs):
         rgb=(round(random.random() * 255), round(random.random() * 100), round(random.random() * 255)))))
     # print(cube, tap_count)
     print("Tapped: ", cube_tapped.object_id)
-
     global id_cube
     id_cube = cube_tapped.object_id
 
